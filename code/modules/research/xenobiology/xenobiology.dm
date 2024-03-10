@@ -3,7 +3,7 @@
 
 /obj/item/slime_extract
 	name = "slime extract"
-	desc = "Goo extracted from a slime. Legends claim these to have \"magical powers\"."
+	desc = "Слизь, извлечённая из слайма. Легенды гласят, что она имеет \"магические свойства\"."
 	icon = 'icons/mob/slimes.dmi'
 	icon_state = "grey slime extract"
 	force = 1
@@ -18,9 +18,9 @@
 /obj/item/slime_extract/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/slimepotion/enhancer))
 		if(Uses >= 5)
-			to_chat(user, "<span class='warning'>You cannot enhance this extract further!</span>")
+			to_chat(user, "<span class='warning'>Этот экстракт больше невозможно улучшить!</span>")
 			return ..()
-		to_chat(user, "<span class='notice'>You apply the enhancer to the slime extract. It may now be reused one more time.</span>")
+		to_chat(user, "<span class='notice'>Ты улучшил экстракт слайма. Теперь его можно использовать еще раз.</span>")
 		Uses++
 		qdel(O)
 	..()
@@ -599,7 +599,7 @@
 /obj/item/slimepotion/clothing/fireproof
 	name = "slime chill potion"
 	id = "Fire Resistance"
-	desc = "A potent chemical mix that will fireproof any article of clothing."
+	desc = "Сильнодействующая химическая смесь, которая сделает огнеупорным любой предмет одежды."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle17"
 	origin_tech = "biotech=5"
@@ -627,7 +627,7 @@
 /obj/item/slimepotion/clothing/acidproof
 	name = "slime acidproof potion"
 	id = "Acid Proof"
-	desc = "A potent chemical mix that will increase acid resistance of any article of clothing"
+	desc = "Мощная химическая смесь, которая повышает кислотостойкость у любого предмета одежды."
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 25)
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle8"
@@ -645,7 +645,7 @@
 	name = "laser resistance slime potion"
 	id = "Laser Resistance"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 5,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	desc = "A potent chemical mix that will increase laser resistance of any article of clothing."
+	desc = "Мощная химическая смесь, которая повышает стойкость к лазерному воздействию у любого предмета одежды."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle4"
 	origin_tech = "biotech=5"
@@ -662,7 +662,7 @@
 	name = "radiation resistance slime potion"
 	id = "Radiation Resistance"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 40, "fire" = 0, "acid" = 0)
-	desc = "A potent chemical mix that will increase radiation resistance of any article of clothing."
+	desc = "Мощная химическая смесь, которая повышает радиационную устойчивость у любого предмета одежды."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle6"
 	origin_tech = "biotech=5"
@@ -679,7 +679,7 @@
 	name = "bio resistance slime potion"
 	id = "Bio Resistance"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 40, "rad" = 0, "fire" = 0, "acid" = 0)
-	desc = "A potent chemical mix that will increase bio resistance of any article of clothing."
+	desc = "Мощная химическая смесь, которая повышает биостойкость у любого предмета одежды."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle7"
 	origin_tech = "biotech=5"
@@ -696,7 +696,7 @@
 	name = "explosion resistance slime potion"
 	id = "Explosion Resistance"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	desc = "A potent chemical mix that will increase explosion resistance of any article of clothing."
+	desc = "Мощная химическая смесь, которая повышает взрывоустойчивость у любого элемента одежды."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle9"
 	origin_tech = "biotech=5"
@@ -712,7 +712,7 @@
 /obj/item/slimepotion/clothing/teleportation
 	name = "teleportation slime potion"
 	id = "Teleportation Resistance"
-	desc = "A potent chemical mix that provides a small chance to teleport when taking damage."
+	desc = "Сильнодействующая химическая смесь, которая дает небольшой шанс телепортироваться при получении урона."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle5"
 	origin_tech = "biotech=5"
@@ -736,7 +736,7 @@
 	name = "Physical damage resistance slime potion"
 	id = "Damage Resistance"
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	desc = "A potent chemical mix that will increase impact and gunshot resistance of any article of clothing."
+	desc = "Мощная химическая смесь, которая повышает ударопрочность и устойчивость к выстрелам у любого элемента одежды."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle10"
 	origin_tech = "biotech=5"
@@ -835,7 +835,7 @@
 /obj/item/stack/tile/bluespace
 	name = "bluespace floor tile"
 	singular_name = "floor tile"
-	desc = "Through a series of micro-teleports, these tiles let people move at incredible speeds."
+	desc = "Благодаря серии микротелепортов, люди здесь двигаются с невероятной скоростью."
 	icon_state = "tile-bluespace"
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 6
@@ -851,13 +851,13 @@
 /turf/simulated/floor/bluespace
 	slowdown = -1
 	icon_state = "bluespace"
-	desc = "Through a series of micro-teleports, these tiles let people move at incredible speeds."
+	desc = "Благодаря серии микротелепортов, люди здесь двигаются с невероятной скоростью."
 	floor_tile = /obj/item/stack/tile/bluespace
 
 /obj/item/stack/tile/sepia
 	name = "sepia floor tile"
 	singular_name = "floor tile"
-	desc = "Time seems to flow very slowly around these tiles."
+	desc = "Кажется, что время здесь течёт очень медленно."
 	icon_state = "tile-sepia"
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 6
@@ -871,7 +871,7 @@
 
 /obj/item/areaeditor/blueprints/slime
 	name = "cerulean prints"
-	desc = "A one use set of blueprints made of jelly like organic material. Extends the reach of the management console."
+	desc = "Одноразовый набор чертежей из желеобразного органического материала. Расширяет охват действия консоли управления."
 	color = "#2956B2"
 
 /obj/item/areaeditor/blueprints/slime/edit_area()
@@ -885,5 +885,5 @@
 /turf/simulated/floor/sepia
 	slowdown = 2
 	icon_state = "sepia"
-	desc = "Time seems to flow very slowly around these tiles."
+	desc = "Кажется, что время здесь течёт очень медленно."
 	floor_tile = /obj/item/stack/tile/sepia
